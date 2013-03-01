@@ -1,0 +1,12 @@
+	<ul>
+		<% if(defined?(records) && !records.nil? && !records.empty?) %>
+			<% records.each do |record| %>
+						<% value = record.entry; entry = entry.to_i if (record.entry % 1 == 0) %>
+				<%= "<li>#{value}; #{record.timestamp.strftime("%m/%d/%Y %l:%M %p")}</li>" %>
+			<% end %>
+		<% elsif(defined?(record) && !record.nil?) %>
+			<li><%= record %></li>		
+		<% else %>
+			No Data
+		<% end %>
+	</ul>

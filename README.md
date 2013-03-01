@@ -1,3 +1,12 @@
+#Crestron Logging
+	This is a backend for logging values and generating graphs. It was designed for easy use
+	with a Crestron control system. All valid requests for log values either an unordered list
+	with values separated from (formatted) timestamps by a semi-colon. Any request without
+	associated data will return "No Data". Valid graph requests will serve an image generated
+	by the Google Charts API at a resolution of 999x250, which is the maximum. If there is not 
+	
+	The API is below.
+
 ##Charts
 *	monthly `GET /graph/$sensor/monthly.png`
 *	hourly `GET /graph/$sensor/hourly.png`
@@ -6,7 +15,7 @@
 
 
 ##Averages
-*	````GET /average/$sensor````
+*	`GET /average/$sensor`
 
 ##Adding Data
 *	value: `POST /$sensor/$value`

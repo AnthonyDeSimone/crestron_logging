@@ -4,6 +4,7 @@
 	with values separated from (formatted) timestamps by a semi-colon. Any request without
 	associated data will return "No Data". Valid graph requests will serve an image generated
 	by the Google Charts API at a resolution of 999x250, which is the maximum. If there is not 
+	enough data to produce a graph, an image dsiaplying that information will be served.
 	
 	The API is below.
 
